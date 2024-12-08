@@ -24,17 +24,18 @@ export default function MenuComponent() {
     <div className="container mx-auto px-4 py-8">
       {menuData.map((category: Heading, categoryIndex) => (
         <div key={categoryIndex} className="mb-8">
-          <h2 className="mb-4 text-2xl font-bold text-gray-800">
+          <h2 className="mb-4 text-2xl font-bold text-secondary">
             {category.heading}
           </h2>
           {category.subcategories.map((subcategory, subcategoryIndex) => (
             <div key={subcategoryIndex} className="mb-6">
-              <h3 className="mb-2 text-xl font-semibold text-gray-700">
+              <h3 className="mb-2 text-xl font-semibold text-primary">
                 {subcategory.subheading}
               </h3>
               <div className="mx-auto my-auto grid max-w-7xl grid-cols-1 gap-5 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                 {subcategory.items.map((item, itemIndex) => (
                   <div
+                    key={itemIndex}
                     className={cn(
                       'relative flex w-full flex-none flex-col gap-3'
                     )}
