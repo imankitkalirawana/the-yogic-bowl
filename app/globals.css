@@ -46,4 +46,13 @@
     --destructive-foreground: 0 0% 100%;
     --ring: 126 47% 63%;
   }
+
+  .no-scrollbar {
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
 }

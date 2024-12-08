@@ -80,29 +80,34 @@ export const menuData = [
           {
             name: 'Pina Colada',
             price: 150,
-            description: 'Tropical blend of pineapple and creamy coconut.'
+            description: 'Tropical blend of pineapple and creamy coconut.',
+            image: '/assets/menu/pina-colada.jpg'
           },
           {
             name: 'Matcha Honey Lemon Soda',
             price: 180,
             description:
-              'Earthy matcha paired with honey and a tangy lemon fizz.'
+              'Earthy matcha paired with honey and a tangy lemon fizz.',
+            image: '/assets/menu/matcha-honey-lemon-soda.jpg'
           },
           {
             name: 'Blue Redry Soda',
             price: 200,
-            description: 'Vibrant blue soda with a hint of citrus.'
+            description: 'Vibrant blue soda with a hint of citrus.',
+            image: '/assets/menu/blue-redry-soda.jpg'
           },
           {
             name: 'Lychee Sky Soda',
             price: 200,
-            description: 'Sweet and fragrant lychee soda with a fizzy twist.'
+            description: 'Sweet and fragrant lychee soda with a fizzy twist.',
+            image: '/assets/menu/lychee-sky-soda.jpg'
           },
           {
             name: 'Peach Coffee Tonic',
             price: 220,
             description:
-              'A refreshing mix of peach essence and cold brew coffee topped with tonic water.'
+              'A refreshing mix of peach essence and cold brew coffee topped with tonic water.',
+            image: '/assets/menu/peach-coffee-tonic.jpg'
           }
         ]
       },
@@ -112,44 +117,52 @@ export const menuData = [
           {
             name: 'Lemon Iced Tea',
             price: 130,
-            description: 'Refreshing iced tea with a tangy lemon kick.'
+            description: 'Refreshing iced tea with a tangy lemon kick.',
+            image: '/assets/menu/lemon-iced-tea.jpg'
           },
           {
             name: 'Peach Iced Tea',
             price: 130,
-            description: 'Sweet and fruity iced tea infused with peach flavor.'
+            description: 'Sweet and fruity iced tea infused with peach flavor.',
+            image: '/assets/menu/peach-iced-tea.jpg'
           },
           {
             name: 'Classic Cold Coffee',
             price: 150,
-            description: 'A smooth and bold chilled coffee blend.'
+            description: 'A smooth and bold chilled coffee blend.',
+            image: '/assets/menu/classic-cold-coffee.jpg'
           },
           {
             name: 'Dalgona Coffee',
             price: 150,
-            description: 'Creamy whipped coffee served over iced milk.'
+            description: 'Creamy whipped coffee served over iced milk.',
+            image: '/assets/menu/dalgona-coffee.jpg'
           },
           {
-            name: 'Black Orange',
+            name: 'Black Orange Coffee',
             price: 160,
-            description: 'Bold black coffee with a citrusy orange twist.'
+            description: 'Bold black coffee with a citrusy orange twist.',
+            image: '/assets/menu/black-orange-coffee.jpg'
           },
           {
             name: 'Iced Caramel Macchiato',
             price: 160,
             description:
-              'Chilled coffee with caramel drizzle and velvety milk layers.'
+              'Chilled coffee with caramel drizzle and velvety milk layers.',
+            image: '/assets/menu/iced-caramel-macchiato.jpg'
           },
           {
             name: 'Thai Tea Mocha',
             price: 180,
-            description: 'A fusion of Thai iced tea and creamy mocha.'
+            description: 'A fusion of Thai iced tea and creamy mocha.',
+            image: '/assets/menu/thai-tea-mocha.webp'
           },
           {
             name: 'Iced Nutella Coffee',
             price: 220,
             description:
-              'Rich cold coffee infused with Nutella and topped with whipped cream.'
+              'Rich cold coffee infused with Nutella and topped with whipped cream.',
+            image: '/assets/menu/iced-nutella-coffee.jpg'
           }
         ]
       }
@@ -165,37 +178,43 @@ export const menuData = [
             name: 'Manchow Soup',
             price: 100,
             description:
-              'A spicy and tangy Chinese-style soup topped with crispy noodles.'
+              'A spicy and tangy Chinese-style soup topped with crispy noodles.',
+            image: '/assets/menu/manchow-soup.jpg'
           },
           {
             name: 'Tomato Basil Soup',
             price: 130,
             description:
-              'A classic blend of ripe tomatoes and fresh basil, finished with a touch of cream.'
+              'A classic blend of ripe tomatoes and fresh basil, finished with a touch of cream.',
+            image: '/assets/menu/tomato-basil-soup.jpg'
           },
           {
             name: 'Sweet Corn Soup',
             price: 130,
             description:
-              'A comforting mix of sweet corn and vegetables in a creamy broth.'
+              'A comforting mix of sweet corn and vegetables in a creamy broth.',
+            image: '/assets/menu/sweet-corn-soup.jpg'
           },
           {
             name: 'Creamy Broccoli Soup',
             price: 200,
             description:
-              'A rich and velvety soup made with fresh broccoli and subtle spices.'
+              'A rich and velvety soup made with fresh broccoli and subtle spices.',
+            image: '/assets/menu/creamy-broccoli-soup.jpg'
           },
           {
             name: 'Mushroom Cappuccino',
             price: 200,
             description:
-              'A sophisticated mushroom soup with a frothy top, served cappuccino-style.'
+              'A sophisticated mushroom soup with a frothy top, served cappuccino-style.',
+            image: '/assets/menu/mushroom-cappuccino.jpg'
           },
           {
             name: 'Tom Yum Soup',
             price: 200,
             description:
-              'Thai-inspired hot and sour soup with vibrant flavors of lemongrass and lime.'
+              'Thai-inspired hot and sour soup with vibrant flavors of lemongrass and lime.',
+            image: '/assets/menu/tom-yum-soup.jpg'
           }
         ]
       },
@@ -206,30 +225,35 @@ export const menuData = [
             name: 'Indian Masala Tea',
             price: 40,
             description:
-              'Traditional spiced tea brewed with aromatic Indian spices.'
+              'Traditional spiced tea brewed with aromatic Indian spices.',
+            image: '/assets/menu/indian-masala-tea.jpg'
           },
           {
             name: 'Honey Lemon Ginger Tea',
             price: 80,
-            description: 'A soothing blend of ginger, honey, and fresh lemon.'
+            description: 'A soothing blend of ginger, honey, and fresh lemon.',
+            image: '/assets/menu/honey-lemon-ginger-tea.jpg'
           },
           {
             name: 'Yogic Tea',
             price: 100,
             description:
-              'A unique blend of warming spices and herbs for balance and rejuvenation.'
+              'A unique blend of warming spices and herbs for balance and rejuvenation.',
+            image: '/assets/menu/yogic-tea.jpg'
           },
           {
             name: 'Blue Butterfly Pea Tea',
             price: 120,
             description:
-              'Vibrant blue tea with earthy tones and a hint of citrus.'
+              'Vibrant blue tea with earthy tones and a hint of citrus.',
+            image: '/assets/menu/blue-butterfly-pea-tea.png'
           },
           {
-            name: 'Kambucha',
+            name: 'Kambucha Tea',
             price: 150,
             description:
-              'A refreshing, fermented tea with a tangy and slightly fizzy twist, packed with probiotics.'
+              'A refreshing, fermented tea with a tangy and slightly fizzy twist, packed with probiotics.',
+            image: '/assets/menu/kambucha-tea.jpg'
           }
         ]
       },
@@ -239,52 +263,61 @@ export const menuData = [
           {
             name: 'Espresso (Single Shot)',
             price: 70,
-            description: 'A bold and intense shot of rich espresso.'
+            description: 'A bold and intense shot of rich espresso.',
+            image: '/assets/menu/espresso-single-shot.jpg'
           },
           {
             name: 'Espresso (Double Shot)',
             price: 110,
-            description: 'A double dose of strong and aromatic espresso.'
+            description: 'A double dose of strong and aromatic espresso.',
+            image: '/assets/menu/espresso-double-shot.jpg'
           },
           {
             name: 'Americano',
             price: 110,
             description:
-              'Espresso diluted with hot water for a smooth, robust flavor.'
+              'Espresso diluted with hot water for a smooth, robust flavor.',
+            image: '/assets/menu/americano.jpg'
           },
           {
             name: 'Cortado',
             price: 120,
             description:
-              'A balanced blend of espresso and steamed milk for a smooth finish.'
+              'A balanced blend of espresso and steamed milk for a smooth finish.',
+            image: '/assets/menu/cortado.jpg'
           },
           {
             name: 'Cappuccino',
             price: 130,
             description:
-              'A classic mix of espresso, steamed milk, and velvety foam.'
+              'A classic mix of espresso, steamed milk, and velvety foam.',
+            image: '/assets/menu/cappuccino.jpg'
           },
           {
             name: 'Latte',
             price: 150,
             description:
-              'Creamy espresso topped with a generous layer of steamed milk.'
+              'Creamy espresso topped with a generous layer of steamed milk.',
+            image: '/assets/menu/latte.jpg'
           },
           {
             name: 'Caramel Macchiato',
             price: 160,
-            description: 'Layers of espresso, caramel, and frothy milk.'
+            description: 'Layers of espresso, caramel, and frothy milk.',
+            image: '/assets/menu/caramel-macchiato.jpg'
           },
           {
             name: 'Cafe Mocha',
             price: 160,
             description:
-              'Chocolatey espresso with steamed milk and whipped cream.'
+              'Chocolatey espresso with steamed milk and whipped cream.',
+            image: '/assets/menu/cafe-mocha.jpg'
           },
           {
             name: 'Matcha Latte',
             price: 180,
-            description: 'A silky mix of premium matcha and steamed milk.'
+            description: 'A silky mix of premium matcha and steamed milk.',
+            image: '/assets/menu/matcha-latte.jpg'
           }
         ]
       }
@@ -296,11 +329,31 @@ export const menuData = [
       {
         subheading: 'Eggs to Order',
         items: [
-          { name: 'Boiled Eggs (2)', price: 50 },
-          { name: 'Plain Omelette', price: 100 },
-          { name: 'Vegetable Omelette', price: 120 },
-          { name: 'Scrambled Eggs', price: 130 },
-          { name: 'Souffle Omelette', price: 150 }
+          {
+            name: 'Boiled Eggs (2)',
+            price: 50,
+            image: '/assets/menu/boiled-eggs.jpg'
+          },
+          {
+            name: 'Plain Omelette',
+            price: 100,
+            image: '/assets/menu/plain-omelette.jpg'
+          },
+          {
+            name: 'Vegetable Omelette',
+            price: 120,
+            image: '/assets/menu/vegetable-omelette.jpg'
+          },
+          {
+            name: 'Scrambled Eggs',
+            price: 130,
+            image: '/assets/menu/scrambled-eggs.jpg'
+          },
+          {
+            name: 'Souffle Omelette',
+            price: 150,
+            image: '/assets/menu/souffle-omelette.jpg'
+          }
         ]
       },
       {
@@ -310,7 +363,8 @@ export const menuData = [
             name: 'Shakshuka',
             price: 260,
             description:
-              'Eggs with cumin poached in a sauce of tomatoes, olive oil, peppers, onion, and garlic, spiced with paprika and cayenne pepper.'
+              'Eggs with cumin poached in a sauce of tomatoes, olive oil, peppers, onion, and garlic, spiced with paprika and cayenne pepper.',
+            image: '/assets/menu/shakshuka.jpg'
           }
         ]
       },
@@ -321,37 +375,43 @@ export const menuData = [
             name: 'Cheese Chilli Toast',
             price: 120,
             description:
-              'Crispy toast loaded with melted cheese and spiced with green chilies for a zesty kick.'
+              'Crispy toast loaded with melted cheese and spiced with green chilies for a zesty kick.',
+            image: '/assets/menu/cheese-chilli-toast.jpg'
           },
           {
             name: 'Toast with Peanut Butter/Fruit Jam',
             price: 120,
             description:
-              'Classic toast with your choice of creamy peanut butter or sweet fruit jam.'
+              'Classic toast with your choice of creamy peanut butter or sweet fruit jam.',
+            image: '/assets/menu/toast-with-peanut-butter-fruit-jam.jpg'
           },
           {
             name: 'Toast with Nutella and Banana',
             price: 150,
             description:
-              'A delightful combination of Nutella spread and fresh banana slices on toast.'
+              'A delightful combination of Nutella spread and fresh banana slices on toast.',
+            image: '/assets/menu/toast-with-nutella-and-banana.jpg'
           },
           {
             name: 'Avocado Toast with Veggies',
             price: 180,
             description:
-              'Creamy avocado topped with a medley of fresh, crisp veggies on toasted bread.'
+              'Creamy avocado topped with a medley of fresh, crisp veggies on toasted bread.',
+            image: '/assets/menu/avocado-toast-with-veggies.jpg'
           },
           {
             name: 'Avocado Toast with Eggs',
             price: 200,
             description:
-              'Hearty avocado toast topped with perfectly cooked eggs.'
+              'Hearty avocado toast topped with perfectly cooked eggs.',
+            image: '/assets/menu/avocado-toast-with-eggs.jpg'
           },
           {
             name: 'Granola Bowl with Fruits and Nuts',
             price: 200,
             description:
-              'Crunchy granola served with seasonal fruits and a sprinkle of nuts.'
+              'Crunchy granola served with seasonal fruits and a sprinkle of nuts.',
+            image: '/assets/menu/granola-bowl-with-fruits-and-nuts.jpg'
           }
         ]
       },
