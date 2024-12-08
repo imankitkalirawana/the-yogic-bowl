@@ -157,22 +157,18 @@ const MenuItemComponent = ({ item }: { item: MenuItem }) => {
 
   return (
     <div ref={ref} className="relative flex w-full flex-none gap-3 sm:flex-col">
-      {inView ? (
-        <div className="max-w-48 sm:max-w-full">
-          <Image
-            isBlurred
-            isZoomed
-            width={400}
-            alt={item.name}
-            className="aspect-[3/4] w-full !max-w-full bg-center hover:scale-110"
-            isLoading={!item.image}
-            src={item.image || '/no-image.png'}
-            loading="lazy"
-          />
-        </div>
-      ) : (
-        <div className="aspect-[3/4] w-full rounded-3xl bg-gray-200" />
-      )}
+      <div className="max-w-48 sm:max-w-full">
+        <Image
+          isBlurred
+          isZoomed
+          width={400}
+          alt={item.name}
+          className="aspect-[3/4] w-full !max-w-full bg-center hover:scale-110"
+          isLoading={!inView}
+          src={item.image || '/no-image.png'}
+          loading="lazy"
+        />
+      </div>
 
       <div className="mt-1 flex w-full flex-col gap-2 px-1">
         <div className="flex items-start justify-between gap-1">
