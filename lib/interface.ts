@@ -19,7 +19,7 @@ export interface MenuItem {
   price: number;
   description?: string;
   image?: string;
-  tags?: string;
+  tags?: string[];
 }
 
 export interface Subcategory {

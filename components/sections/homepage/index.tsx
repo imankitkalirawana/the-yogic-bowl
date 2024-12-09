@@ -37,7 +37,11 @@ export default function MenuComponent() {
             (item) =>
               item.name.toLowerCase().includes(searchQuery) ||
               (item.description &&
-                item.description.toLowerCase().includes(searchQuery))
+                item.description.toLowerCase().includes(searchQuery)) ||
+              (item.tags &&
+                item.tags.some((tag) =>
+                  tag.toLowerCase().includes(searchQuery)
+                ))
           )
         }))
     }))
