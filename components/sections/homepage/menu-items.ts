@@ -1,21 +1,6 @@
-interface MenuData {
-  heading: string;
-  subcategories: Subcategory[];
-}
+import { Heading } from '@/lib/interface';
 
-interface Subcategory {
-  subheading: string;
-  items: MenuItem[];
-}
-
-interface MenuItem {
-  name: string;
-  price: number;
-  description?: string;
-  image?: string;
-}
-
-export const menuData: MenuData[] = [
+export const menuData: Heading[] = [
   {
     heading: 'Beverages',
     subcategories: [
@@ -1157,7 +1142,7 @@ export const menuData: MenuData[] = [
         ]
       },
       {
-        subheading: 'ACCOMPANIMENTS',
+        subheading: 'Accompaniments',
         items: [
           {
             name: 'Plain Curd',

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import {
   Button,
+  ButtonGroup,
   Card,
   Chip,
   Image,
@@ -11,34 +12,16 @@ import {
 import { menuData } from './menu-items';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { useInView } from 'react-intersection-observer';
-
-interface MenuItem {
-  name: string;
-  price: number;
-  description?: string;
-  image?: string;
-}
-
-interface Subcategory {
-  subheading: string;
-  items: MenuItem[];
-}
-
-interface Heading {
-  heading: string;
-  subcategories: Subcategory[];
-}
+import NotFoundIcon from '@/components/icons/not-found';
+import { Heading, MenuItem } from '@/lib/interface';
 
 export default function MenuComponent() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [tempSearchQuery, setTempSearchQuery] = useState<string>('');
 
   const handleCategoryClick = (subheading: string) => {
     setSelectedCategory(subheading);
-  };
-
-  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value.toLowerCase());
   };
 
   const filteredData = menuData
@@ -58,97 +41,139 @@ export default function MenuComponent() {
           )
         }))
     }))
-    .filter(
-      (category) =>
-        category.heading.toLowerCase().includes(searchQuery) ||
-        category.subcategories.some(
-          (subcategory) =>
-            subcategory.subheading.toLowerCase().includes(searchQuery) ||
-            subcategory.items.length > 0
-        )
+    .filter((category) =>
+      category.subcategories.some((subcategory) => subcategory.items.length > 0)
     );
 
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Search Bar */}
-      <div className="mb-4 max-w-sm">
-        <Input
-          startContent={<Icon icon="eva:search-outline" />}
-          type="text"
-          onClear={() => setSearchQuery('')}
-          value={searchQuery}
-          onChange={handleSearch}
-          isClearable
-          placeholder="Search categories, subcategories, or items"
-          className="w-full"
-        />
-      </div>
 
       <ScrollShadow
         orientation="horizontal"
-        className="no-scrollbar mb-8 flex gap-2 overflow-x-scroll py-4"
+        className="no-scrollbar mb-8 flex gap-2 overflow-x-scroll p-1"
       >
-        <Chip
-          radius="full"
-          size="lg"
-          color={selectedCategory ? 'default' : 'primary'}
-          variant={selectedCategory ? 'bordered' : 'flat'}
-          as={Button}
-          onClick={() => setSelectedCategory(null)}
-        >
-          All
-        </Chip>
-        {menuData.map((category, index) =>
-          category.subcategories.map((subcategory) => (
-            <Chip
-              key={index}
-              size="lg"
-              onClick={() => handleCategoryClick(subcategory.subheading)}
-              radius="full"
-              color={
-                selectedCategory === subcategory.subheading
-                  ? 'primary'
-                  : 'default'
-              }
-              variant={
-                selectedCategory === subcategory.subheading
-                  ? 'flat'
-                  : 'bordered'
-              }
-              as={Button}
-            >
-              {subcategory.subheading}
-            </Chip>
-          ))
-        )}
+        <ButtonGroup>
+          <Button
+            radius="full"
+            color={selectedCategory ? 'default' : 'primary'}
+            variant="flat"
+            as={Button}
+            onClick={() => setSelectedCategory(null)}
+          >
+            All
+          </Button>
+          {menuData.map((category, index) =>
+            category.subcategories.map((subcategory) => (
+              <Button
+                key={index}
+                onClick={() => handleCategoryClick(subcategory.subheading)}
+                radius="full"
+                color={
+                  selectedCategory === subcategory.subheading
+                    ? 'primary'
+                    : 'default'
+                }
+                variant="flat"
+                as={Button}
+              >
+                {subcategory.subheading}
+              </Button>
+            ))
+          )}
+        </ButtonGroup>
       </ScrollShadow>
 
+      <div className="mb-4 flex max-w-sm items-center">
+        <Input
+          startContent={<Icon icon="eva:search-outline" />}
+          type="text"
+          placeholder={
+            selectedCategory
+              ? `Search amoung ${selectedCategory}`
+              : `Search for a dish`
+          }
+          className="w-full rounded-r-none"
+          value={tempSearchQuery}
+          onChange={(e) => setTempSearchQuery(e.target.value)}
+          onKeyPress={(e) => {
+            if (e.key === 'Enter') {
+              setSearchQuery(tempSearchQuery.toLowerCase());
+            }
+          }}
+          endContent={
+            searchQuery && (
+              <Button
+                variant="flat"
+                onClick={() => {
+                  setTempSearchQuery('');
+                  setSearchQuery('');
+                }}
+                size="sm"
+                isIconOnly
+                radius="full"
+              >
+                <Icon icon="eva:close-outline" />
+              </Button>
+            )
+          }
+          classNames={{
+            inputWrapper: 'rounded-r-none'
+          }}
+        />
+        <Button
+          isIconOnly
+          color="primary"
+          className="rounded-l-none"
+          onClick={() => {
+            setSearchQuery(tempSearchQuery.toLowerCase());
+          }}
+        >
+          <Icon icon="eva:search-outline" />
+        </Button>
+      </div>
+
       <Card className="p-4">
-        {filteredData.map((category: Heading, categoryIndex) => (
-          <div key={categoryIndex} className="mb-8">
-            {category.subcategories.length > 0 && (
-              <>
-                <h2 className="mb-4 text-2xl font-bold text-secondary">
-                  {category.heading}
-                </h2>
-              </>
-            )}
-            {category.subcategories.map((subcategory, subcategoryIndex) => (
-              <div key={subcategoryIndex} className="mb-6">
-                {subcategory.items.length > 0 && (
-                  <h3 className="mb-2 text-xl font-semibold text-primary">
-                    {subcategory.subheading}
-                  </h3>
+        {filteredData.length > 0 ? (
+          filteredData.map((category: Heading, categoryIndex) => (
+            <div key={categoryIndex}>
+              {category.subcategories.length > 0 &&
+                category.subcategories.some(
+                  (subcategory) => subcategory.items.length > 0
+                ) && (
+                  <>
+                    <h2 className="mb-4 text-2xl font-bold uppercase text-primary">
+                      {category.heading}
+                    </h2>
+                  </>
                 )}
-                <div className="mx-auto my-auto grid max-w-7xl grid-cols-1 justify-items-center gap-5 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                  {subcategory.items.map((item, itemIndex) => (
-                    <MenuItemComponent key={itemIndex} item={item} />
-                  ))}
+              {category.subcategories.map((subcategory, subcategoryIndex) => (
+                <div key={subcategoryIndex} className="mb-6">
+                  {subcategory.items.length > 0 && (
+                    <h3 className="mb-2 text-xl font-semibold capitalize text-primary">
+                      {subcategory.subheading}
+                    </h3>
+                  )}
+                  <div className="mx-auto my-auto grid max-w-7xl grid-cols-1 justify-items-center gap-5 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                    {subcategory.items.map((item, itemIndex) => (
+                      <MenuItemComponent key={itemIndex} item={item} />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          ))
+        ) : (
+          <div className="flex flex-col items-center">
+            <NotFoundIcon width="200px" height="200px" class="text-primary" />
+            <h3 className="text-2xl font-semibold text-primary">
+              No Results Found
+            </h3>
+            <p className="text-center text-default-700">
+              We couldn&apos;t find what you searched for. Try searching again.
+            </p>
           </div>
-        ))}
+        )}
       </Card>
     </div>
   );
@@ -170,7 +195,7 @@ const MenuItemComponent = ({ item }: { item: MenuItem }) => {
           alt={item.name}
           className="aspect-[3/4] w-full !max-w-full bg-center hover:scale-110"
           isLoading={!inView}
-          src={item.image || '/no-image.png'}
+          src={item.image}
           loading="lazy"
         />
       </div>

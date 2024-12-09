@@ -13,3 +13,21 @@ export interface User extends Base {
   name: string;
   role: 'admin' | 'user';
 }
+
+export interface MenuItem {
+  name: string;
+  price: number;
+  description?: string;
+  image?: string;
+  tags?: string;
+}
+
+export interface Subcategory {
+  subheading: string;
+  items: MenuItem[];
+}
+
+export interface Heading {
+  heading: string;
+  subcategories: Subcategory[];
+}
