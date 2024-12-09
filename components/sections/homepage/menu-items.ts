@@ -464,31 +464,36 @@ export const menuData: MenuData[] = [
           {
             name: 'Coleslaw Sandwich',
             price: 150,
-            description: 'Creamy coleslaw sandwiched in whole-grain bread.'
+            description: 'Creamy coleslaw sandwiched in whole-grain bread.',
+            image: '/assets/menu/coleslaw-sandwich.jpg'
           },
           {
             name: 'Bombay Special Sandwich',
             price: 150,
             description:
-              'A Mumbai street-style sandwich with layers of chutney, vegetables, and cheese.'
+              'A Mumbai street-style sandwich with layers of chutney, vegetables, and cheese.',
+            image: '/assets/menu/bombay-special-sandwich.jpg'
           },
           {
             name: 'Tandoori Paneer Sandwich',
             price: 200,
             description:
-              'Spiced tandoori paneer with onions and bell peppers in a toasted sandwich.'
+              'Spiced tandoori paneer with onions and bell peppers in a toasted sandwich.',
+            image: '/assets/menu/tandoori-paneer-sandwich.jpg'
           },
           {
             name: 'Club Sandwich',
             price: 200,
             description:
-              'A classic triple-layer sandwich with fresh vegetables and flavorful spreads.'
+              'A classic triple-layer sandwich with fresh vegetables and flavorful spreads.',
+            image: '/assets/menu/club-sandwich.jpg'
           },
           {
             name: 'Corn And Cheese Sandwich',
             price: 220,
             description:
-              'A gooey mix of sweet corn and cheese in crispy grilled bread.'
+              'A gooey mix of sweet corn and cheese in crispy grilled bread.',
+            image: '/assets/menu/corn-and-cheese-sandwich.jpg'
           }
         ]
       },
@@ -499,13 +504,15 @@ export const menuData: MenuData[] = [
             name: 'Kanda Poha',
             price: 80,
             description:
-              'Light and flavorful flattened rice with sautéed onions and spices.'
+              'Light and flavorful flattened rice with sautéed onions and spices.',
+            image: '/assets/menu/kanda-poha.jpg'
           },
           {
             name: 'Indori Poha',
             price: 100,
             description:
-              'A classic Indore-style sweet and sour poha topped with sev, peanuts, and a dash of lemon.'
+              'A classic Indore-style sweet and sour poha topped with sev, peanuts, and a dash of lemon.',
+            image: '/assets/menu/indori-poha.jpg'
           }
         ]
       },
@@ -516,30 +523,35 @@ export const menuData: MenuData[] = [
             name: 'Plain Ghee Dosa',
             price: 80,
             description:
-              'A crispy rice crepe cooked with pure ghee, served with chutney and sambhar.'
+              'A crispy rice crepe cooked with pure ghee, served with chutney and sambhar.',
+            image: '/assets/menu/plain-ghee-dosa.jpg'
           },
           {
             name: 'Podi Dosa',
             price: 100,
             description:
-              'A unique dosa infused with spicy podi powder and clarified butter.'
+              'A unique dosa infused with spicy podi powder and clarified butter.',
+            image: '/assets/menu/podi-dosa.jpg'
           },
           {
             name: 'Masala Dosa',
             price: 120,
-            description: 'Traditional dosa stuffed with spiced potato filling.'
+            description: 'Traditional dosa stuffed with spiced potato filling.',
+            image: '/assets/menu/masala-dosa.jpg'
           },
           {
             name: 'Paneer/Tofu Dosa',
             price: 180,
             description:
-              'Protein-rich dosa filled with a flavorful paneer or tofu masala mix.'
+              'Protein-rich dosa filled with a flavorful paneer or tofu masala mix.',
+            image: '/assets/menu/paneer-tofu-dosa.jpg'
           },
           {
             name: 'Mysore Special Dosa',
             price: 200,
             description:
-              'A spicy dosa layered with tangy Mysore chutney and served with coconut chutney.'
+              'A spicy dosa layered with tangy Mysore chutney and served with coconut chutney.',
+            image: '/assets/menu/mysore-special-dosa.jpg'
           }
         ]
       },
@@ -549,19 +561,22 @@ export const menuData: MenuData[] = [
           {
             name: 'Masala Paratha',
             price: 60,
-            description: 'Flavored paratha with a blend of spices and herbs.'
+            description: 'Flavored paratha with a blend of spices and herbs.',
+            image: '/assets/menu/masala-paratha.jpg'
           },
           {
             name: 'Aloo-Pyaaz Stuffed Paratha',
             price: 80,
             description:
-              'Classic paratha with a spiced potato and onion filling.'
+              'Classic paratha with a spiced potato and onion filling.',
+            image: '/assets/menu/aloo-pyaaz-stuffed-paratha.jpg'
           },
           {
             name: 'Paneer Paratha',
             price: 100,
             description:
-              'Stuffed with soft, seasoned cottage cheese and served with pickle and onion rings.'
+              'Stuffed with soft, seasoned cottage cheese and served with pickle and onion rings.',
+            image: '/assets/menu/paneer-paratha.jpg'
           }
         ]
       },
@@ -572,37 +587,43 @@ export const menuData: MenuData[] = [
             name: 'Sprouts and Garlic Salad',
             price: 180,
             description:
-              'Crunchy sprouts tossed with roasted garlic, herbs, and a light vinaigrette.'
+              'Crunchy sprouts tossed with roasted garlic, herbs, and a light vinaigrette.',
+            image: '/assets/menu/sprouts-and-garlic-salad.jpg'
           },
           {
             name: 'Greek Vegan Chickpea Millet Salad',
             price: 200,
             description:
-              'A Mediterranean-inspired salad with chickpeas, millet, fresh vegetables, and tangy lemon dressing.'
+              'A Mediterranean-inspired salad with chickpeas, millet, fresh vegetables, and tangy lemon dressing.',
+            image: '/assets/menu/greek-vegan-chickpea-millet-salad.jpg'
           },
           {
             name: 'Mexican Bean Pepper Salad',
             price: 220,
             description:
-              'A zesty mix of kidney beans, bell peppers, corn, and a lime-cilantro dressing.'
+              'A zesty mix of kidney beans, bell peppers, corn, and a lime-cilantro dressing.',
+            image: '/assets/menu/mexican-bean-pepper-salad.jpg'
           },
           {
             name: 'Waldorf Pasta Salad',
             price: 250,
             description:
-              'A classic twist with fresh apples, walnuts, pasta, and creamy dressing.'
+              'A classic twist with fresh apples, walnuts, pasta, and creamy dressing.',
+            image: '/assets/menu/waldorf-pasta-salad.jpg'
           },
           {
             name: 'Spring Pesto Pasta Salad',
             price: 250,
             description:
-              'A vibrant combination of pasta, seasonal vegetables, and basil pesto.'
+              'A vibrant combination of pasta, seasonal vegetables, and basil pesto.',
+            image: '/assets/menu/spring-pesto-pasta-salad.jpg'
           },
           {
             name: 'Crunchy Broccoli Millet Salad',
             price: 260,
             description:
-              'Protein-rich salad with the crunch of broccoli, almonds, carrots tossed with herby lemon dressing.'
+              'Protein-rich salad with the crunch of broccoli, almonds, carrots tossed with herby lemon dressing.',
+            image: '/assets/menu/crunchy-broccoli-millet-salad.jpg'
           }
         ]
       },
@@ -613,31 +634,37 @@ export const menuData: MenuData[] = [
             name: "Strawberries 'n' Cream Smoothie Bowl",
             price: 250,
             description:
-              'Smooth blend of strawberries, yogurt, maple syrup, and vanilla topped with the cornflakes, blueberries, almonds, pumpkin seeds, chia seeds.'
+              'Smooth blend of strawberries, yogurt, maple syrup, and vanilla topped with the cornflakes, blueberries, almonds, pumpkin seeds, chia seeds.',
+            image: '/assets/menu/strawberries-n-cream-smoothie-bowl.jpg'
           },
           {
             name: 'Tropical Smoothie Bowl',
             price: 250,
             description:
-              'A tropical delight with mango, pineapple, kiwi, and shredded coconut.'
+              'A tropical delight with mango, pineapple, kiwi, and shredded coconut.',
+            image: '/assets/menu/tropical-smoothie-bowl.jpg'
           },
           {
             name: 'Chocolate Peanut Butter and Banana Smoothie Bowl',
             price: 250,
             description:
-              'A decadent mix of cocoa, peanut butter, and bananas topped with granola and dark chocolate shavings.'
+              'A decadent mix of cocoa, peanut butter, and bananas topped with granola and dark chocolate shavings.',
+            image:
+              '/assets/menu/chocolate-peanut-butter-and-banana-smoothie-bowl.jpg'
           },
           {
             name: 'Pineapple Banana Peach Smoothie Bowl',
             price: 270,
             description:
-              'Sweet blend of pineapple, banana, and peach topped with almonds and flaxseeds.'
+              'Sweet blend of pineapple, banana, and peach topped with almonds and flaxseeds.',
+            image: '/assets/menu/pineapple-banana-peach-smoothie-bowl.jpg'
           },
           {
             name: 'Avocado and Kale Smoothie Bowl',
             price: 280,
             description:
-              'Blend of kale, avocado, banana and almond milk topped with raspberries, chia seeds and granola.'
+              'Blend of kale, avocado, banana and almond milk topped with raspberries, chia seeds and granola.',
+            image: '/assets/menu/avocado-and-kale-smoothie-bowl.jpg'
           }
         ]
       },
@@ -648,31 +675,36 @@ export const menuData: MenuData[] = [
             name: 'Vegan Tofu Himalayan Millet Bowl',
             price: 300,
             description:
-              'Steamed Himalayan millet, crispy tofu, and vegetables in a sesame-ginger dressing.'
+              'Steamed Himalayan millet, crispy tofu, and vegetables in a sesame-ginger dressing.',
+            image: '/assets/menu/vegan-tofu-himalayan-millet-bowl.jpg'
           },
           {
             name: 'Pad Thai Noodles Bowl',
             price: 280,
             description:
-              'A classic Thai bowl with rice noodles, tofu tossed in orange peanut sauce topped with crunchy peanuts.'
+              'A classic Thai bowl with rice noodles, tofu tossed in orange peanut sauce topped with crunchy peanuts.',
+            image: '/assets/menu/pad-thai-noodles-bowl.jpg'
           },
           {
             name: 'Middle Eastern Falafel Bowl',
             price: 260,
             description:
-              'Crispy falafels served with hummus, pita, and a fresh cucumber-tomato salad.'
+              'Crispy falafels served with hummus, pita, and a fresh cucumber-tomato salad.',
+            image: '/assets/menu/middle-eastern-falafel-bowl.jpg'
           },
           {
             name: 'Mediterranean Bowl',
             price: 300,
             description:
-              'Tofu, spinach and veggies are cooked slowly in light tomato herby stew served with gluten-free Himalayan millet rice and a side green salad.'
+              'Tofu, spinach and veggies are cooked slowly in light tomato herby stew served with gluten-free Himalayan millet rice and a side green salad.',
+            image: '/assets/menu/mediterranean-bowl.jpg'
           },
           {
             name: 'Red Thai Bowl',
             price: 300,
             description:
-              'Red Thai curry with Indian Jasmine rice served with Kimchi Salad.'
+              'Red Thai curry with Indian Jasmine rice served with Kimchi Salad.',
+            image: '/assets/menu/red-thai-bowl.jpg'
           }
         ]
       }
@@ -688,31 +720,36 @@ export const menuData: MenuData[] = [
             name: 'Vegetable Chowmein',
             price: 100,
             description:
-              'A street-style favorite with crunchy vegetables and a savory sauce.'
+              'A street-style favorite with crunchy vegetables and a savory sauce.',
+            image: '/assets/menu/vegetable-chowmein.jpg'
           },
           {
             name: 'Chilli Garlic Noodles',
             price: 120,
             description:
-              'Spicy noodles tossed with garlic, chili, and vegetables for a bold flavor.'
+              'Spicy noodles tossed with garlic, chili, and vegetables for a bold flavor.',
+            image: '/assets/menu/chilli-garlic-noodles.jpg'
           },
           {
             name: 'Thukpa',
             price: 150,
             description:
-              'A Himalayan noodle soup packed with fresh vegetables and flavorful broth.'
+              'A Himalayan noodle soup packed with fresh vegetables and flavorful broth.',
+            image: '/assets/menu/thukpa.jpg'
           },
           {
             name: 'Hakka Noodles',
             price: 180,
             description:
-              'Classic stir-fried noodles with vegetables and a hint of soy sauce.'
+              'Classic stir-fried noodles with vegetables and a hint of soy sauce.',
+            image: '/assets/menu/hakka-noodles.jpg'
           },
           {
             name: 'Thai Tofu Peanut Noodles',
             price: 200,
             description:
-              'Creamy and nutty noodles with Thai tofu and a peanut sauce.'
+              'Creamy and nutty noodles with Thai tofu and a peanut sauce.',
+            image: '/assets/menu/thai-tofu-peanut-noodles.jpg'
           }
         ]
       },
@@ -723,24 +760,28 @@ export const menuData: MenuData[] = [
             name: 'Sicilian Spaghetti',
             price: 200,
             description:
-              'A vibrant dish with garlic, olives and a hint of chili.'
+              'A vibrant dish with garlic, olives and a hint of chili.',
+            image: '/assets/menu/sicilian-spaghetti.jpg'
           },
           {
             name: 'Penne Arrabiata',
             price: 200,
             description:
-              'Penne pasta in a spicy tomato sauce with chili flakes and garlic.'
+              'Penne pasta in a spicy tomato sauce with chili flakes and garlic.',
+            image: '/assets/menu/penne-arrabiata.jpg'
           },
           {
             name: 'Fusilli In Marinara Sauce',
             price: 220,
             description:
-              'Twirled fusilli pasta in a tangy tomato marinara sauce with fresh basil.'
+              'Twirled fusilli pasta in a tangy tomato marinara sauce with fresh basil.',
+            image: '/assets/menu/fusilli-in-marinara-sauce.jpg'
           },
           {
             name: 'Creamy Mushroom Pasta',
             price: 250,
-            description: 'Pasta tossed in a creamy mushroom sauce with herbs.'
+            description: 'Pasta tossed in a creamy mushroom sauce with herbs.',
+            image: '/assets/menu/creamy-mushroom-pasta.jpg'
           }
         ]
       },
@@ -751,25 +792,29 @@ export const menuData: MenuData[] = [
             name: 'Pizza Margherita',
             price: 150,
             description:
-              'Classic Italian pizza topped with tangy tomato sauce, fresh mozzarella, and basil.'
+              'Classic Italian pizza topped with tangy tomato sauce, fresh mozzarella, and basil.',
+            image: '/assets/menu/pizza-margherita.jpg'
           },
           {
             name: 'Corn and Cheese Pizza',
             price: 160,
             description:
-              'A cheesy delight loaded with sweet corn and a blend of gooey cheeses.'
+              'A cheesy delight loaded with sweet corn and a blend of gooey cheeses.',
+            image: '/assets/menu/corn-and-cheese-pizza.jpg'
           },
           {
             name: 'Tandoori Paneer Pizza',
             price: 220,
             description:
-              'A fusion treat with marinated tandoori paneer chunks, onions, and bell peppers.'
+              'A fusion treat with marinated tandoori paneer chunks, onions, and bell peppers.',
+            image: '/assets/menu/tandoori-paneer-pizza.jpg'
           },
           {
             name: 'Vegetable Pizza',
             price: 220,
             description:
-              'A colorful medley of fresh vegetables, cheese, and savory tomato sauce.'
+              'A colorful medley of fresh vegetables, cheese, and savory tomato sauce.',
+            image: '/assets/menu/vegetable-pizza.jpg'
           }
         ]
       },
@@ -780,19 +825,22 @@ export const menuData: MenuData[] = [
             name: 'Kathi Roll',
             price: 160,
             description:
-              'An Indian favorite with spiced vegetables wrapped in soft flatbread.'
+              'An Indian favorite with spiced vegetables wrapped in soft flatbread.',
+            image: '/assets/menu/kathi-roll.jpg'
           },
           {
             name: 'Egg Kathi Roll',
             price: 180,
             description:
-              'A protein-rich roll with spiced egg filling and vegetables.'
+              'A protein-rich roll with spiced egg filling and vegetables.',
+            image: '/assets/menu/egg-kathi-roll.jpg'
           },
           {
             name: 'Pesto Wrap',
             price: 250,
             description:
-              'A wrap filled with fresh vegetables, greens, and a zesty pesto sauce.'
+              'A wrap filled with fresh vegetables, greens, and a zesty pesto sauce.',
+            image: '/assets/menu/pesto-wrap.jpg'
           }
         ]
       },
@@ -803,25 +851,29 @@ export const menuData: MenuData[] = [
             name: 'Nutella Banana Crepe',
             price: 200,
             description:
-              'Soft and warm crepes filled with creamy Nutella and fresh banana slices, topped with a drizzle of chocolate sauce.'
+              'Soft and warm crepes filled with creamy Nutella and fresh banana slices, topped with a drizzle of chocolate sauce.',
+            image: '/assets/menu/nutella-banana-crepe.jpg'
           },
           {
             name: 'Brunch Crepe',
             price: 250,
             description:
-              'A savory crepe packed with scrambled eggs, sautéed vegetables, and melted cheese, perfect for a hearty meal.'
+              'A savory crepe packed with scrambled eggs, sautéed vegetables, and melted cheese, perfect for a hearty meal.',
+            image: '/assets/menu/brunch-crepe.jpg'
           },
           {
             name: 'Hawaii Sunset Crepe',
             price: 300,
             description:
-              'A sweet and tangy combination of pineapple, caramel sauce, and toasted coconut, reminiscent of an island sunset.'
+              'A sweet and tangy combination of pineapple, caramel sauce, and toasted coconut, reminiscent of an island sunset.',
+            image: '/assets/menu/hawaii-sunset-crepe.jpg'
           },
           {
             name: 'Fruit Island Crepe',
             price: 350,
             description:
-              'A tropical treat filled with mixed fruits like strawberries, kiwi and banana, custard cream, and nutella.'
+              'A tropical treat filled with mixed fruits like strawberries, kiwi and banana, custard cream, and nutella.',
+            image: '/assets/menu/fruit-island-crepe.jpg'
           }
         ]
       },
@@ -832,25 +884,29 @@ export const menuData: MenuData[] = [
             name: 'Dal Khichdi',
             price: 150,
             description:
-              'A nutritious blend of green lentils, rice, and mild spices, perfect for a wholesome and comforting meal.'
+              'A nutritious blend of green lentils, rice, and mild spices, perfect for a wholesome and comforting meal.',
+            image: '/assets/menu/dal-khichdi.jpg'
           },
           {
             name: 'Curd Rice',
             price: 160,
             description:
-              'A combination of cooked rice and yogurt, delicately seasoned with mustard seeds and curry leaves.'
+              'A combination of cooked rice and yogurt, delicately seasoned with mustard seeds and curry leaves.',
+            image: '/assets/menu/curd-rice.jpg'
           },
           {
             name: 'Indian Yogic Bowl',
             price: 200,
             description:
-              'A balanced and wholesome bowl of steamed rice with mixed lentil curry, and seasonal vegetables inspired by yogic dietary principles.'
+              'A balanced and wholesome bowl of steamed rice with mixed lentil curry, and seasonal vegetables inspired by yogic dietary principles.',
+            image: '/assets/menu/indian-yogic-bowl.jpg'
           },
           {
             name: 'Saucy Masala Corn And Herb Rice Bowl',
             price: 250,
             description:
-              'Spicy and tangy saucy corn served alongside fragrant herb-infused rice for a delightful combination.'
+              'Spicy and tangy saucy corn served alongside fragrant herb-infused rice for a delightful combination.',
+            image: '/assets/menu/saucy-masala-corn-and-herb-rice-bowl.jpg'
           }
         ]
       }
@@ -866,49 +922,57 @@ export const menuData: MenuData[] = [
             name: 'Peanut Chaat',
             price: 80,
             description:
-              'A crunchy and tangy snack made with roasted peanuts, fresh vegetables, and zesty spices, perfect for a light and flavorful bite.'
+              'A crunchy and tangy snack made with roasted peanuts, fresh vegetables, and zesty spices, perfect for a light and flavorful bite.',
+            image: '/assets/menu/peanut-chaat.jpg'
           },
           {
             name: 'Masala Papad',
             price: 100,
             description:
-              'Crispy roasted papad topped with a mix of fresh onions, tomatoes, and spices for a crunchy and flavorful snack.'
+              'Crispy roasted papad topped with a mix of fresh onions, tomatoes, and spices for a crunchy and flavorful snack.',
+            image: '/assets/menu/masala-papad.jpg'
           },
           {
             name: 'Gobhi Manchurian',
             price: 130,
             description:
-              'Crispy cauliflower florets tossed in a tangy Indo-Chinese sauce, packed with flavor.'
+              'Crispy cauliflower florets tossed in a tangy Indo-Chinese sauce, packed with flavor.',
+            image: '/assets/menu/gobhi-manchurian.jpg'
           },
           {
             name: 'Honey Chilli Potato',
             price: 150,
             description:
-              'Crunchy potato fingers coated in a sweet and spicy sauce, a perfect blend of flavors.'
+              'Crunchy potato fingers coated in a sweet and spicy sauce, a perfect blend of flavors.',
+            image: '/assets/menu/honey-chilli-potato.jpg'
           },
           {
             name: 'Mix Veg Fritters',
             price: 150,
             description:
-              'A delicious assortment of vegetables deep-fried in a gram flour batter for a crispy appetizer.'
+              'A delicious assortment of vegetables deep-fried in a gram flour batter for a crispy appetizer.',
+            image: '/assets/menu/mix-veg-fritters.jpg'
           },
           {
             name: 'Crispy Fried American Corn',
             price: 180,
             description:
-              'Sweet corn kernels fried until golden and tossed with spices for a delightful snack.'
+              'Sweet corn kernels fried until golden and tossed with spices for a delightful snack.',
+            image: '/assets/menu/crispy-fried-american-corn.jpg'
           },
           {
             name: 'Beetroot Kebab',
             price: 180,
             description:
-              'Soft and flavorful beetroot patties, mildly spiced and grilled to perfection.'
+              'Soft and flavorful beetroot patties, mildly spiced and grilled to perfection.',
+            image: '/assets/menu/beetroot-kebab.jpg'
           },
           {
             name: 'Chilli Mushroom',
             price: 200,
             description:
-              'Juicy mushrooms stir-fried with bell peppers in a spicy and tangy sauce.'
+              'Juicy mushrooms stir-fried with bell peppers in a spicy and tangy sauce.',
+            image: '/assets/menu/chilli-mushroom.jpg'
           }
         ]
       },
@@ -919,61 +983,71 @@ export const menuData: MenuData[] = [
             name: 'Plain Tawa Chappati',
             price: 30,
             description:
-              '2 Soft and simple whole wheat flatbread, perfect with any curry.'
+              '2 Soft and simple whole wheat flatbread, perfect with any curry.',
+            image: '/assets/menu/plain-tawa-chappati.jpg'
           },
           {
             name: 'Butter Chappati',
             price: 40,
             description:
-              '2 A soft whole wheat flatbread brushed with butter for added richness.'
+              '2 A soft whole wheat flatbread brushed with butter for added richness.',
+            image: '/assets/menu/butter-chappati.jpg'
           },
           {
             name: 'Single Millet Chappati/Mandua ki Roti',
             price: 70,
             description:
-              '2 nutritious flatbread made from a single variety of millet i.e, finger millet.'
+              '2 nutritious flatbread made from a single variety of millet i.e, finger millet.',
+            image: '/assets/menu/single-millet-chappati.jpg'
           },
           {
             name: 'Mix Millet Chappati',
             price: 80,
             description:
-              '2 flatbreads made with a blend of millets for a healthy twist.'
+              '2 flatbreads made with a blend of millets for a healthy twist.',
+            image: '/assets/menu/mix-millet-chappati.jpg'
           },
           {
             name: 'Plain Paratha',
             price: 40,
             description:
-              '1 pc. flaky, layered Indian flatbread, cooked on a griddle.'
+              '1 pc. flaky, layered Indian flatbread, cooked on a griddle.',
+            image: '/assets/menu/plain-paratha.jpg'
           },
           {
             name: 'Lachha Paratha',
             price: 50,
             description:
-              '1 pc. A multi-layered, crispy flatbread, rich and indulgent.'
+              '1 pc. A multi-layered, crispy flatbread, rich and indulgent.',
+            image: '/assets/menu/lachha-paratha.jpg'
           },
           {
             name: 'Masala Paratha',
             price: 60,
             description:
-              '1 pc. spiced flatbread with a perfect balance of flavors.'
+              '1 pc. spiced flatbread with a perfect balance of flavors.',
+            image: '/assets/menu/masala-paratha.jpg'
           },
           {
             name: 'Malabar Paratha',
             price: 70,
             description:
-              '1 pc. A soft, flaky, and slightly sweet flatbread from South India.'
+              '1 pc. A soft, flaky, and slightly sweet flatbread from South India.',
+            image: '/assets/menu/malabar-paratha.jpg'
           },
           {
             name: 'Aloo Stuffed Paratha',
             price: 80,
             description:
-              '1 pc. hearty flatbread stuffed with spiced mashed potatoes and onion.'
+              '1 pc. hearty flatbread stuffed with spiced mashed potatoes and onion.',
+            image: '/assets/menu/aloo-stuffed-paratha.jpg'
           },
           {
             name: 'Paneer Paratha',
             price: 100,
             description:
-              '1 pc. A stuffed bread filled with seasoned cottage cheese, delicious and filling.'
+              '1 pc. A stuffed bread filled with seasoned cottage cheese, delicious and filling.',
+            image: '/assets/menu/paneer-paratha.jpg'
           }
         ]
       },
@@ -984,36 +1058,42 @@ export const menuData: MenuData[] = [
             name: 'Steamed Rice',
             price: 70,
             description:
-              'Simple and fluffy white rice, a versatile accompaniment to any dish.'
+              'Simple and fluffy white rice, a versatile accompaniment to any dish.',
+            image: '/assets/menu/steamed-rice.jpg'
           },
           {
             name: 'Jeera Rice',
             price: 90,
             description:
-              'Aromatic basmati rice flavored with cumin seeds, a light and fragrant choice.'
+              'Aromatic basmati rice flavored with cumin seeds, a light and fragrant choice.',
+            image: '/assets/menu/jeera-rice.jpg'
           },
           {
             name: 'Vegetable Fried Rice',
             price: 120,
             description:
-              'Stir-fried rice with colorful vegetables and mild spices, perfect for all tastes.'
+              'Stir-fried rice with colorful vegetables and mild spices, perfect for all tastes.',
+            image: '/assets/menu/vegetable-fried-rice.jpg'
           },
           {
             name: 'Egg Fried Rice',
             price: 150,
             description:
-              'A protein-rich twist on fried rice with scrambled eggs and a hint of spice.'
+              'A protein-rich twist on fried rice with scrambled eggs and a hint of spice.',
+            image: '/assets/menu/egg-fried-rice.jpg'
           },
           {
             name: 'Veg Biryani',
             price: 200,
             description:
-              'A flavorful rice dish layered with aromatic spices, vegetables, and herbs.'
+              'A flavorful rice dish layered with aromatic spices, vegetables, and herbs.',
+            image: '/assets/menu/veg-biryani.jpg'
           },
           {
             name: 'Paneer Tikka Pulao',
             price: 250,
-            description: 'Aromatic rice cooked with marinated grilled paneer.'
+            description: 'Aromatic rice cooked with marinated grilled paneer.',
+            image: '/assets/menu/paneer-tikka-pulao.jpg'
           }
         ]
       },
@@ -1024,47 +1104,55 @@ export const menuData: MenuData[] = [
             name: 'Dal Fry',
             price: 150,
             description:
-              'Yellow lentils cooked with onions, tomatoes, and spices.'
+              'Yellow lentils cooked with onions, tomatoes, and spices.',
+            image: '/assets/menu/dal-fry.jpg'
           },
           {
             name: 'Tarkari Handi',
             price: 180,
             description:
-              'Mixed vegetables cooked with Indian spices in a clay pot.'
+              'Mixed vegetables cooked with Indian spices in a clay pot.',
+            image: '/assets/menu/tarkari-handi.jpg'
           },
           {
             name: 'Aloo Gobhi Shimla Mirch',
             price: 180,
             description:
-              'Stir-fried potatoes, cauliflower, and bell peppers cooked in Indian gravy.'
+              'Stir-fried potatoes, cauliflower, and bell peppers cooked in Indian gravy.',
+            image: '/assets/menu/aloo-gobhi-shimla-mirch.jpg'
           },
           {
             name: 'Anda Masala',
             price: 190,
             description:
-              'Boiled eggs coated in a thick, spicy masala, cooked to perfection for a flavorful dry curry.'
+              'Boiled eggs coated in a thick, spicy masala, cooked to perfection for a flavorful dry curry.',
+            image: '/assets/menu/anda-masala.jpg'
           },
           {
             name: 'Egg Curry',
             price: 190,
             description:
-              'A flavorful curry with boiled eggs and aromatic spices.'
+              'A flavorful curry with boiled eggs and aromatic spices.',
+            image: '/assets/menu/egg-curry.jpg'
           },
           {
             name: 'Mushroom Do Pyaza',
             price: 220,
-            description: 'Mushrooms cooked with onions in a flavorful gravy.'
+            description: 'Mushrooms cooked with onions in a flavorful gravy.',
+            image: '/assets/menu/mushroom-do-pyaza.jpg'
           },
           {
             name: 'Kadhai Paneer',
             price: 220,
             description:
-              'Cottage cheese in a spicy tomato-based sauce with bell peppers.'
+              'Cottage cheese in a spicy tomato-based sauce with bell peppers.',
+            image: '/assets/menu/kadhai-paneer.jpg'
           },
           {
             name: 'Paneer Butter Masala',
             price: 250,
-            description: 'Creamy tomato gravy with soft cottage cheese cubes.'
+            description: 'Creamy tomato gravy with soft cottage cheese cubes.',
+            image: '/assets/menu/paneer-butter-masala.jpg'
           }
         ]
       },
@@ -1074,38 +1162,45 @@ export const menuData: MenuData[] = [
           {
             name: 'Plain Curd',
             price: 50,
-            description: 'Simple, refreshing homemade yogurt.'
+            description: 'Simple, refreshing homemade yogurt.',
+            image: '/assets/menu/plain-curd.jpg'
           },
           {
             name: 'Boondi Raita',
             price: 60,
-            description: 'Yogurt with crispy fried gram flour balls.'
+            description: 'Yogurt with crispy fried gram flour balls.',
+            image: '/assets/menu/boondi-raita.jpg'
           },
           {
             name: 'Mix Veg Raita',
             price: 80,
-            description: 'Yogurt mixed with finely chopped fresh vegetables.'
+            description: 'Yogurt mixed with finely chopped fresh vegetables.',
+            image: '/assets/menu/mix-veg-raita.jpg'
           },
           {
             name: 'Pineapple Raita',
             price: 90,
-            description: 'Sweet and tangy yogurt with pineapple chunks.'
+            description: 'Sweet and tangy yogurt with pineapple chunks.',
+            image: '/assets/menu/pineapple-raita.jpg'
           },
           {
             name: 'Sweet Lassi',
             price: 150,
-            description: 'A chilled and creamy yogurt-based drink with sugar.'
+            description: 'A chilled and creamy yogurt-based drink with sugar.',
+            image: '/assets/menu/sweet-lassi.jpg'
           },
           {
             name: 'Mango Lassi',
             price: 180,
-            description: 'Sweet mango-flavored yogurt drink.'
+            description: 'Sweet mango-flavored yogurt drink.',
+            image: '/assets/menu/mango-lassi.jpg'
           },
           {
             name: 'Coconut Lassi',
             price: 200,
             description:
-              'Yogurt-based drink prepared using yogurt and tender coconut pulp enhanced with spices.'
+              'Yogurt-based drink prepared using yogurt and tender coconut pulp enhanced with spices.',
+            image: '/assets/menu/coconut-lassi.jpg'
           }
         ]
       },
@@ -1116,37 +1211,43 @@ export const menuData: MenuData[] = [
             name: 'Gulab Jamun',
             price: 100,
             description:
-              'Soft, golden dumplings made from milk solids, soaked in aromatic sugar syrup.'
+              'Soft, golden dumplings made from milk solids, soaked in aromatic sugar syrup.',
+            image: '/assets/menu/gulab-jamun.jpg'
           },
           {
             name: 'Ice Creams',
             price: 100,
             description:
-              'Creamy and refreshing frozen delights available in a variety of flavors.'
+              'Creamy and refreshing frozen delights available in a variety of flavors.',
+            image: '/assets/menu/ice-creams.jpg'
           },
           {
             name: 'Banana Split',
             price: 150,
             description:
-              'A delightful treat featuring sliced bananas topped with scoops of ice cream, whipped cream, nuts, and chocolate syrup.'
+              'A delightful treat featuring sliced bananas topped with scoops of ice cream, whipped cream, nuts, and chocolate syrup.',
+            image: '/assets/menu/banana-split.jpg'
           },
           {
             name: 'Affogato',
             price: 150,
             description:
-              'An Italian dessert comprising a scoop of ice cream topped with hot espresso.'
+              'An Italian dessert comprising a scoop of ice cream topped with hot espresso.',
+            image: '/assets/menu/affogato.jpg'
           },
           {
             name: 'Gajar Halwa',
             price: 150,
             description:
-              'A classic Indian sweet made with grated carrots, milk, sugar, and a touch of ghee.'
+              'A classic Indian sweet made with grated carrots, milk, sugar, and a touch of ghee.',
+            image: '/assets/menu/gajar-halwa.jpg'
           },
           {
             name: 'Moong Dal Halwa',
             price: 200,
             description:
-              'A rich and decadent dessert made with split yellow lentils, ghee, and sugar.'
+              'A rich and decadent dessert made with split yellow lentils, ghee, and sugar.',
+            image: '/assets/menu/moong-dal-halwa.jpg'
           }
         ]
       }
