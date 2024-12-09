@@ -206,7 +206,7 @@ const MenuItemComponent = ({ item }: { item: MenuItem }) => {
 
       <div className="mt-1 flex w-full flex-col gap-2 px-1">
         <div className="flex items-start justify-between gap-1">
-          <h3 className="text-small font-medium capitalize text-default-700">
+          <h3 className="line-clamp-2 text-small font-medium capitalize text-default-700">
             {item.name}
           </h3>
         </div>
