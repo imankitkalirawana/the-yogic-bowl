@@ -4,8 +4,6 @@ import {
   Button,
   Card,
   Chip,
-  cn,
-  Divider,
   Image,
   Input,
   ScrollShadow
@@ -35,8 +33,8 @@ export default function MenuComponent() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const handleCategoryClick = (heading: string) => {
-    setSelectedCategory(selectedCategory === heading ? null : heading);
+  const handleCategoryClick = (subheading: string) => {
+    setSelectedCategory(subheading);
   };
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -44,20 +42,21 @@ export default function MenuComponent() {
   };
 
   const filteredData = menuData
-    .filter((category) =>
-      selectedCategory ? category.heading === selectedCategory : true
-    )
     .map((category) => ({
       ...category,
-      subcategories: category.subcategories.map((subcategory) => ({
-        ...subcategory,
-        items: subcategory.items.filter(
-          (item: MenuItem) =>
-            item.name.toLowerCase().includes(searchQuery) ||
-            (item.description &&
-              item.description.toLowerCase().includes(searchQuery))
+      subcategories: category.subcategories
+        .filter((subcategory) =>
+          selectedCategory ? subcategory.subheading === selectedCategory : true
         )
-      }))
+        .map((subcategory) => ({
+          ...subcategory,
+          items: subcategory.items.filter(
+            (item) =>
+              item.name.toLowerCase().includes(searchQuery) ||
+              (item.description &&
+                item.description.toLowerCase().includes(searchQuery))
+          )
+        }))
     }))
     .filter(
       (category) =>
@@ -99,23 +98,29 @@ export default function MenuComponent() {
         >
           All
         </Chip>
-        {menuData.map((category, index) => (
-          <Chip
-            key={index}
-            size="lg"
-            onClick={() => handleCategoryClick(category.heading)}
-            radius="full"
-            color={
-              selectedCategory === category.heading ? 'primary' : 'default'
-            }
-            variant={
-              selectedCategory === category.heading ? 'flat' : 'bordered'
-            }
-            as={Button}
-          >
-            {category.heading}
-          </Chip>
-        ))}
+        {menuData.map((category, index) =>
+          category.subcategories.map((subcategory) => (
+            <Chip
+              key={index}
+              size="lg"
+              onClick={() => handleCategoryClick(subcategory.subheading)}
+              radius="full"
+              color={
+                selectedCategory === subcategory.subheading
+                  ? 'primary'
+                  : 'default'
+              }
+              variant={
+                selectedCategory === subcategory.subheading
+                  ? 'flat'
+                  : 'bordered'
+              }
+              as={Button}
+            >
+              {subcategory.subheading}
+            </Chip>
+          ))
+        )}
       </ScrollShadow>
 
       <Card className="p-4">
@@ -164,7 +169,7 @@ const MenuItemComponent = ({ item }: { item: MenuItem }) => {
           width={400}
           alt={item.name}
           className="aspect-[3/4] w-full !max-w-full bg-center hover:scale-110"
-          isLoading={!inView || !item.image}
+          // isLoading={!inView}
           src={item.image || '/no-image.png'}
           loading="lazy"
         />
