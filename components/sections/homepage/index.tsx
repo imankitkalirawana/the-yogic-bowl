@@ -169,7 +169,7 @@ const MenuItemComponent = ({ item }: { item: MenuItem }) => {
           width={400}
           alt={item.name}
           className="aspect-[3/4] w-full !max-w-full bg-center hover:scale-110"
-          // isLoading={!inView}
+          isLoading={!inView}
           src={item.image || '/no-image.png'}
           loading="lazy"
         />
