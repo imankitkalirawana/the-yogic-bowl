@@ -1,5 +1,6 @@
 'use client';
-import React, { useState } from 'react';
+
+import React, { useState, useMemo } from 'react';
 import {
   Button,
   ButtonGroup,
@@ -15,6 +16,46 @@ import { useInView } from 'react-intersection-observer';
 import NotFoundIcon from '@/components/icons/not-found';
 import { Heading, MenuItem } from '@/lib/interface';
 
+const MenuItemComponent = React.memo(({ item }: { item: MenuItem }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1
+  });
+
+  return (
+    <div ref={ref} className="relative flex w-full flex-none gap-3 sm:flex-col">
+      <div className="max-w-48 sm:max-w-full">
+        <Image
+          isBlurred
+          isZoomed
+          width={400}
+          alt={item.name}
+          className="aspect-[3/4] w-full !max-w-full bg-center hover:scale-110"
+          isLoading={!inView}
+          src={item.image}
+          loading="lazy"
+        />
+      </div>
+      <div className="mt-1 flex w-full flex-col gap-2 px-1">
+        <div className="flex items-start justify-between gap-1">
+          <h3 className="line-clamp-2 text-small font-medium capitalize text-default-700">
+            {item.name}
+          </h3>
+        </div>
+        {item.description && (
+          <p
+            title={item.description}
+            className="line-clamp-3 text-small text-default-500 sm:line-clamp-2"
+          >
+            {item.description}
+          </p>
+        )}
+        <p className="text-small font-medium text-default-500">₹{item.price}</p>
+      </div>
+    </div>
+  );
+});
+
 export default function MenuComponent() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -24,35 +65,59 @@ export default function MenuComponent() {
     setSelectedCategory(subheading);
   };
 
-  const filteredData = menuData
-    .map((category) => ({
-      ...category,
-      subcategories: category.subcategories
-        .filter((subcategory) =>
-          selectedCategory ? subcategory.subheading === selectedCategory : true
-        )
-        .map((subcategory) => ({
-          ...subcategory,
-          items: subcategory.items.filter(
-            (item) =>
-              item.name.toLowerCase().includes(searchQuery) ||
-              (item.description &&
-                item.description.toLowerCase().includes(searchQuery)) ||
-              (item.tags &&
-                item.tags.some((tag) =>
-                  tag.toLowerCase().includes(searchQuery)
-                ))
+  const filteredData = useMemo(() => {
+    return menuData
+      .map((category) => ({
+        ...category,
+        subcategories: category.subcategories
+          .filter((subcategory) =>
+            selectedCategory
+              ? subcategory.subheading === selectedCategory
+              : true
           )
-        }))
-    }))
-    .filter((category) =>
-      category.subcategories.some((subcategory) => subcategory.items.length > 0)
+          .map((subcategory) => ({
+            ...subcategory,
+            items: subcategory.items.filter(
+              (item) =>
+                item.name.toLowerCase().includes(searchQuery) ||
+                (item.description &&
+                  item.description.toLowerCase().includes(searchQuery)) ||
+                (item.tags &&
+                  item.tags.some((tag) =>
+                    tag.toLowerCase().includes(searchQuery)
+                  ))
+            )
+          }))
+      }))
+      .filter((category) =>
+        category.subcategories.some(
+          (subcategory) => subcategory.items.length > 0
+        )
+      );
+  }, [menuData, selectedCategory, searchQuery]);
+
+  const categoryButtons = useMemo(() => {
+    return menuData.map((category, index) =>
+      category.subcategories.map((subcategory) => (
+        <Button
+          key={`${index}-${subcategory.subheading}`}
+          onClick={() => handleCategoryClick(subcategory.subheading)}
+          radius="full"
+          color={
+            selectedCategory === subcategory.subheading ? 'primary' : 'default'
+          }
+          variant="flat"
+          as={Button}
+        >
+          {subcategory.subheading}
+        </Button>
+      ))
     );
+  }, [menuData, selectedCategory]);
 
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Search Bar */}
-
       <ScrollShadow
         orientation="horizontal"
         className="no-scrollbar mb-8 flex gap-2 overflow-x-scroll p-1"
@@ -67,24 +132,7 @@ export default function MenuComponent() {
           >
             All
           </Button>
-          {menuData.map((category, index) =>
-            category.subcategories.map((subcategory) => (
-              <Button
-                key={index}
-                onClick={() => handleCategoryClick(subcategory.subheading)}
-                radius="full"
-                color={
-                  selectedCategory === subcategory.subheading
-                    ? 'primary'
-                    : 'default'
-                }
-                variant="flat"
-                as={Button}
-              >
-                {subcategory.subheading}
-              </Button>
-            ))
-          )}
+          {categoryButtons}
         </ButtonGroup>
       </ScrollShadow>
 
@@ -94,7 +142,7 @@ export default function MenuComponent() {
           type="text"
           placeholder={
             selectedCategory
-              ? `Search amoung ${selectedCategory}`
+              ? `Search among ${selectedCategory}`
               : `Search for a dish`
           }
           className="w-full rounded-r-none"
@@ -145,11 +193,9 @@ export default function MenuComponent() {
                 category.subcategories.some(
                   (subcategory) => subcategory.items.length > 0
                 ) && (
-                  <>
-                    <h2 className="mb-4 text-2xl font-bold uppercase text-primary">
-                      {category.heading}
-                    </h2>
-                  </>
+                  <h2 className="mb-4 text-2xl font-bold uppercase text-primary">
+                    {category.heading}
+                  </h2>
                 )}
               {category.subcategories.map((subcategory, subcategoryIndex) => (
                 <div key={subcategoryIndex} className="mb-6">
@@ -182,44 +228,3 @@ export default function MenuComponent() {
     </div>
   );
 }
-
-const MenuItemComponent = ({ item }: { item: MenuItem }) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
-
-  return (
-    <div ref={ref} className="relative flex w-full flex-none gap-3 sm:flex-col">
-      <div className="max-w-48 sm:max-w-full">
-        <Image
-          isBlurred
-          isZoomed
-          width={400}
-          alt={item.name}
-          className="aspect-[3/4] w-full !max-w-full bg-center hover:scale-110"
-          isLoading={!inView}
-          src={item.image}
-          loading="lazy"
-        />
-      </div>
-
-      <div className="mt-1 flex w-full flex-col gap-2 px-1">
-        <div className="flex items-start justify-between gap-1">
-          <h3 className="line-clamp-2 text-small font-medium capitalize text-default-700">
-            {item.name}
-          </h3>
-        </div>
-        {item.description && (
-          <p
-            title={item.description}
-            className="line-clamp-3 text-small text-default-500 sm:line-clamp-2"
-          >
-            {item.description}
-          </p>
-        )}
-        <p className="text-small font-medium text-default-500">₹{item.price}</p>
-      </div>
-    </div>
-  );
-};
